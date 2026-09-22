@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Polymath Wizard — Turning Education into an Interactive Experience." />
+  <title>Polymath Wizard — Interactive Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Polymath Wizard home">
+      <img class="brand-compact" src="assets/polymath-mark.svg" alt="Polymath Wizard symbol" />
+      <img class="brand-full" src="assets/wizard-full.svg" alt="Polymath Wizard" />
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#difference">Pedagogy</a>
+      <a href="#ai">AI + Learning</a>
+      <a href="#wizards">Wizards</a>
+      <a href="#philosophy">Philosophy</a>
+      <a class="nav-cta" href="#contact">Start a Conversation</a>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-dark">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">POLYMATH WIZARD / EDTECH</p>
+        <h1>Learning should feel like an <span>experience.</span></h1>
+        <p class="hero-sub">We combine education, AI, simulation and visual interaction to turn abstract concepts into worlds students can explore.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#wizards">Enter the Experience <span>↗</span></a>
+          <a class="text-link" href="#difference">See what makes us different <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-footer"><span>TURNING EDUCATION INTO AN INTERACTIVE EXPERIENCE.</span><span class="scroll-label">SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="statement section-light">
+      <div class="statement-label">01 / THE IDEA</div>
+      <div class="statement-main reveal">
+        <h2>From <em>explaining</em> concepts to letting learners <strong>experience</strong> them.</h2>
+        <p>Polymath Wizard is built around one simple belief: curiosity grows when education becomes something you can see, manipulate, test and discover.</p>
+      </div>
+    </section>
+
+    <section id="difference" class="difference section-light">
+      <div class="section-head reveal"><span>02 / THE NEW PEDAGOGY</span><h2>From passive<br><span>repetition to active discovery.</span></h2></div>
+
+      <div class="pedagogy-card reveal" id="pedagogy-card" data-mode="textbook">
+        <div class="pedagogy-bar">
+          <span class="pedagogy-bar-label">FIG. 01 / TEACHING MODE</span>
+          <div class="pedagogy-toggle" id="pedagogy-toggle" role="switch" tabindex="0" aria-checked="false" aria-label="Switch between textbook and interactive mode">
+            <span class="toggle-word off">TEXTBOOK</span>
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-word on">INTERACT</span>
+          </div>
+        </div>
+
+        <div class="pedagogy-stage">
+          <div class="pedagogy-visual">
+            <svg class="gravity-diagram" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".85">
+                <circle cx="260" cy="215" r="58" stroke-dasharray="2 6"/>
+                <circle cx="260" cy="215" r="94" stroke-dasharray="2 6" opacity=".8"/>
+                <circle cx="260" cy="215" r="132" stroke-dasharray="2 6" opacity=".6"/>
+                <circle cx="260" cy="215" r="172" stroke-dasharray="3 7" opacity=".4"/>
+              </g>
+              <line x1="260" y1="215" x2="381" y2="93" stroke="currentColor" stroke-width="1" stroke-dasharray="4 5" opacity=".5"/>
+              <line x1="260" y1="215" x2="322" y2="153" stroke="currentColor" stroke-width="1.4" marker-end="url(#pw-arrow)"/>
+              <defs>
+                <marker id="pw-arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
+                </marker>
+              </defs>
+              <circle cx="260" cy="215" r="36" fill="currentColor"/>
+              <circle cx="381" cy="93" r="12" fill="currentColor"/>
+              <text x="260" y="272" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="10" letter-spacing="2" fill="currentColor">EARTH</text>
+              <text x="381" y="76" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="9" letter-spacing="2" fill="currentColor">MOON</text>
+              <text x="330" y="145" font-family="'Space Grotesk',sans-serif" font-size="8" letter-spacing="1.5" fill="currentColor">PULL</text>
+              <text x="24" y="34" font-family="'Space Grotesk',sans-serif" font-size="9" letter-spacing="2" fill="currentColor">GRAVITATIONAL FIELD</text>
+            </svg>
+            <canvas id="gravity-canvas" class="gravity-canvas" aria-label="Live gravity simulation: an apple falling"></canvas>
+          </div>
+
+          <div class="pedagogy-copy">
+            <div class="copy-textbook">
+              <span class="panel-label">TRADITIONAL / 01</span>
+              <h3>Newton's Law of Gravitation</h3>
+              <p class="formula">F&nbsp;=&nbsp;G&nbsp;·&nbsp;(m<sub>1</sub>m<sub>2</sub>)&nbsp;/&nbsp;r²</p>
+              <p>Every mass pulls on every other mass. The textbook gives you the formula, one static diagram, and a paragraph to memorize before the test.</p>
+            </div>
+            <div class="copy-sim">
+              <span class="panel-label">POLYMATH WIZARD / 02</span>
+              <h3>Change the Gravity. Feel the Drop.</h3>
+              <p>Set the gravitational strength, then release the apple and watch the system respond in real time — no memorizing required.</p>
+              <div class="sim-controls">
+                <label for="gravity-slider">GRAVITY STRENGTH <span id="gravity-value">9.8</span> m/s²</label>
+                <input type="range" id="gravity-slider" min="1" max="40" step="0.5" value="9.8" />
+                <button class="button button-dark" id="drop-btn" type="button">Drop the Apple <span>↓</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai" class="ai-section section-dark">
+      <div class="adaptive-mini reveal" id="adaptive-mini" aria-label="Live demo of the Polymath Wizard adaptive learning engine">
+        <div class="am-bar">
+          <span class="am-bar-label">FIG. 02 / ADAPTIVE ENGINE</span>
+          <span class="am-live"><i></i>LIVE DEMO</span>
+        </div>
+
+        <div class="am-stats">
+          <div class="am-stat"><span>ANSWERED</span><b id="am-answered">0</b></div>
+          <div class="am-stat"><span>ACCURACY</span><b id="am-accuracy">—</b></div>
+          <div class="am-stat"><span>STREAK</span><b id="am-streak">0</b></div>
+          <div class="am-stat"><span>MASTERY</span><b id="am-mastery">0%</b></div>
+        </div>
+
+        <div class="am-knowledge">
+          <div class="am-title"><span>KNOWLEDGE STATE</span><span>MASTERY · LEVEL</span></div>
+          <div id="am-concepts"></div>
+        </div>
+
+        <div class="am-card">
+          <div class="am-meta" id="am-meta"></div>
+          <p class="am-question" id="am-question">Initialising…</p>
+          <div class="am-options" id="am-options"></div>
+          <div class="am-feedback" id="am-feedback" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="ai-copy reveal">
+        <p class="eyebrow">03 / ADAPTIVE AI × LEARNING</p>
+        <h2>A lesson that <span>adapts</span> to every learner.</h2>
+        <p>Every answer teaches the system something. It tracks what each student knows, decides what to ask next, and keeps the challenge in the zone where growth happens: not too easy, never overwhelming.</p>
+        <ul class="ai-points">
+          <li><b>01</b><span><strong>Knowledge tracing.</strong> Mastery is estimated per concept and updated after every answer.</span></li>
+          <li><b>02</b><span><strong>Adaptive difficulty.</strong> Streaks step the level up. Mistakes step it back down.</span></li>
+          <li><b>03</b><span><strong>Prerequisite paths.</strong> Advanced topics unlock only once foundations are solid.</span></li>
+        </ul>
+        <div class="flow"><span>ANSWER</span><b>→</b><span>ESTIMATE</span><b>→</b><span>ADAPT</span><b>→</b><span>NEXT QUESTION</span></div>
+        <p class="am-hint">Try it. Answer a few questions and watch the knowledge state respond in real time.</p>
+      </div>
+    </section>
+
+    <section id="wizards" class="wizards section-light">
+      <div class="section-head reveal"><span>04 / THE FOUR WIZARDS</span><h2>One vision.<br><span>Four worlds of discovery.</span></h2></div>
+      <div class="wizard-grid" role="tablist" aria-label="Choose a subject">
+        <button type="button" class="wizard-card math reveal" data-world="math" role="tab" aria-selected="true" aria-controls="sim-panel" id="tab-math">
+          <span class="wc-num">01</span>
+          <svg class="wc-icon" viewBox="0 0 64 64" aria-hidden="true">
+  <path d="M10 52 L54 52 L10 12 Z"/>
+  <path d="M10 42 H20 V52"/>
+  <path d="M41 52 A13 13 0 0 0 44.4 43.2"/>
+  <path d="M6.5 32 H13.5"/>
+  <path d="M32 48.5 V55.5"/>
+  <circle class="dot" cx="10" cy="12" r="2.6"/><circle class="dot" cx="10" cy="52" r="2.6"/><circle class="dot" cx="54" cy="52" r="2.6"/>
+</svg>
+          <h3>Wizards of Mathematics</h3>
+          <p>Patterns, geometry, logic and dynamic mathematical worlds.</p>
+          <span class="wc-cta"><i class="wc-cta-open">OPEN SIMULATION</i><i class="wc-cta-live">NOW RUNNING</i><b>↗</b></span>
+        </button>
+        <button type="button" class="wizard-card chemistry reveal" data-world="chemistry" role="tab" aria-selected="false" aria-controls="sim-panel" id="tab-chemistry">
+          <span class="wc-num">02</span>
+          <svg class="wc-icon" viewBox="0 0 64 64" aria-hidden="true">
+  <path d="M23 7 H41"/>
+  <path d="M27 7 V22 L11.6 49.6 A4.2 4.2 0 0 0 15.3 56 H48.7 A4.2 4.2 0 0 0 52.4 49.6 L37 22 V7"/>
+  <path d="M17.6 40 Q24.5 35.6 32 40 T46.4 40"/>
+  <circle cx="27" cy="48.5" r="2.4"/><circle cx="37" cy="47" r="1.8"/><circle cx="32.5" cy="30" r="1.6"/><circle cx="39.5" cy="50.5" r="1.2"/>
+</svg>
+          <h3>Wizards of Chemistry</h3>
+          <p>Molecules, reactions and matter made visual and tangible.</p>
+          <span class="wc-cta"><i class="wc-cta-open">OPEN SIMULATION</i><i class="wc-cta-live">NOW RUNNING</i><b>↗</b></span>
+        </button>
+        <button type="button" class="wizard-card biology reveal" data-world="biology" role="tab" aria-selected="false" aria-controls="sim-panel" id="tab-biology">
+          <span class="wc-num">03</span>
+          <svg class="wc-icon" viewBox="0 0 64 64" aria-hidden="true">
+  <path d="M32 5 L34.3 5.7 L36.6 6.3 L38.8 7 L40.8 7.7 L42.6 8.4 L44.1 9.1 L45.4 9.7 L46.3 10.4 L46.8 11.1 L47 11.8 L46.8 12.4 L46.3 13.1 L45.4 13.8 L44.1 14.4 L42.6 15.1 L40.8 15.8 L38.8 16.5 L36.6 17.1 L34.3 17.8 L32 18.5 L29.7 19.2 L27.4 19.9 L25.2 20.5 L23.2 21.2 L21.4 21.9 L19.9 22.6 L18.6 23.2 L17.7 23.9 L17.2 24.6 L17 25.2 L17.2 25.9 L17.7 26.6 L18.6 27.3 L19.9 27.9 L21.4 28.6 L23.2 29.3 L25.2 30 L27.4 30.6 L29.7 31.3 L32 32 L34.3 32.7 L36.6 33.4 L38.8 34 L40.8 34.7 L42.6 35.4 L44.1 36 L45.4 36.7 L46.3 37.4 L46.8 38.1 L47 38.8 L46.8 39.4 L46.3 40.1 L45.4 40.8 L44.1 41.5 L42.6 42.1 L40.8 42.8 L38.8 43.5 L36.6 44.1 L34.3 44.8 L32 45.5 L29.7 46.2 L27.4 46.9 L25.2 47.5 L23.2 48.2 L21.4 48.9 L19.9 49.5 L18.6 50.2 L17.7 50.9 L17.2 51.6 L17 52.2 L17.2 52.9 L17.7 53.6 L18.6 54.3 L19.9 55 L21.4 55.6 L23.2 56.3 L25.2 57 L27.4 57.6 L29.7 58.3 L32 59"/><path d="M32 5 L29.7 5.7 L27.4 6.3 L25.2 7 L23.2 7.7 L21.4 8.4 L19.9 9.1 L18.6 9.7 L17.7 10.4 L17.2 11.1 L17 11.8 L17.2 12.4 L17.7 13.1 L18.6 13.8 L19.9 14.4 L21.4 15.1 L23.2 15.8 L25.2 16.5 L27.4 17.1 L29.7 17.8 L32 18.5 L34.3 19.2 L36.6 19.9 L38.8 20.5 L40.8 21.2 L42.6 21.9 L44.1 22.6 L45.4 23.2 L46.3 23.9 L46.8 24.6 L47 25.2 L46.8 25.9 L46.3 26.6 L45.4 27.3 L44.1 27.9 L42.6 28.6 L40.8 29.3 L38.8 30 L36.6 30.6 L34.3 31.3 L32 32 L29.7 32.7 L27.4 33.4 L25.2 34 L23.2 34.7 L21.4 35.4 L19.9 36 L18.6 36.7 L17.7 37.4 L17.2 38.1 L17 38.8 L17.2 39.4 L17.7 40.1 L18.6 40.8 L19.9 41.5 L21.4 42.1 L23.2 42.8 L25.2 43.5 L27.4 44.1 L29.7 44.8 L32 45.5 L34.3 46.2 L36.6 46.9 L38.8 47.5 L40.8 48.2 L42.6 48.9 L44.1 49.5 L45.4 50.2 L46.3 50.9 L46.8 51.6 L47 52.2 L46.8 52.9 L46.3 53.6 L45.4 54.3 L44.1 55 L42.6 55.6 L40.8 56.3 L38.8 57 L36.6 57.6 L34.3 58.3 L32 59"/><path d="M43.9 8.9 H20.1 M43.9 14.6 H20.1 M20.1 22.4 H43.9 M20.1 28.1 H43.9 M43.9 36 H20.1 M43.9 41.5 H20.1 M20.1 49.5 H43.9 M20.1 55 H43.9"/>
+</svg>
+          <h3>Wizards of Biology</h3>
+          <p>Life systems, cells and structures that can be explored.</p>
+          <span class="wc-cta"><i class="wc-cta-open">OPEN SIMULATION</i><i class="wc-cta-live">NOW RUNNING</i><b>↗</b></span>
+        </button>
+        <button type="button" class="wizard-card physics reveal" data-world="physics" role="tab" aria-selected="false" aria-controls="sim-panel" id="tab-physics">
+          <span class="wc-num">04</span>
+          <svg class="wc-icon" viewBox="0 0 64 64" aria-hidden="true">
+  <path d="M6 48 H58"/>
+  <path d="M10 48 l-3 4 M18 48 l-3 4 M26 48 l-3 4 M34 48 l-3 4 M42 48 l-3 4 M50 48 l-3 4"/>
+  <rect x="22" y="30" width="20" height="18"/>
+  <path d="M32 30 V12 M28.5 16 L32 11.5 L35.5 16"/>
+  <path d="M42 39 H58 M54 35.5 L58.5 39 L54 42.5"/>
+  <path d="M22 39 H8 M12 35.5 L7.5 39 L12 42.5" stroke-dasharray="0"/>
+  <circle class="dot" cx="32" cy="39" r="2"/>
+</svg>
+          <h3>Wizards of Physics</h3>
+          <p>Forces, waves, energy and invisible systems brought to life.</p>
+          <span class="wc-cta"><i class="wc-cta-open">OPEN SIMULATION</i><i class="wc-cta-live">NOW RUNNING</i><b>↗</b></span>
+        </button>
+      </div>
+      <div class="sim-stage" id="sim-panel" role="tabpanel" aria-live="polite" data-world="math">
+        <div class="sim-bar">
+          <span class="sim-bar-label" id="sim-fig">FIG. 03 / LIVE SIMULATION</span>
+          <span class="sim-live"><i></i>INTERACTIVE</span>
+        </div>
+        <div class="sim-body">
+          <div class="sim-side">
+            <span class="sim-kicker" id="sim-kicker">MATHEMATICS</span>
+            <h3 id="sim-title">Triangle Explorer</h3>
+            <p id="sim-text">Drag any corner. The sides and angles update live, and the triangle names itself.</p>
+            <div class="sim-readout" id="sim-readout"></div>
+            <div class="sim-controls" id="sim-controls"></div>
+          </div>
+          <div class="sim-view">
+            <canvas id="sim-canvas" aria-label="Interactive simulation canvas"></canvas>
+            <div class="sim-tip" id="sim-tip"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="philosophy section-light">
+      <div class="section-head reveal"><span>05 / PHILOSOPHY</span><h2>Four ideas<br><span>we keep returning to.</span></h2></div>
+      <div class="nb-stage" id="nb-stage" role="group" aria-roledescription="notebook" aria-label="Four ideas we keep returning to, on the pages of an open notebook. Swipe, tap a page, use the buttons or the arrow keys to turn the page." tabindex="0">
+        <div class="nb-book" id="nb-book" data-spread="1">
+          <div class="nb-page nb-left nb-light" data-page="1">
+            <div class="nb-top"><span class="nb-tag">N° 01 / ON EXPLANATION</span><span class="nb-folio">01</span></div>
+            <blockquote class="nb-quote"><p>“Education should not stop at explanation.”</p></blockquote>
+            <svg class="nb-scribble" viewBox="0 0 200 16" aria-hidden="true"><path pathLength="260" d="M3 8 C 28 2, 52 13, 82 7 S 140 3, 197 9"/></svg>
+            
+          </div>
+          <div class="nb-page nb-right nb-dark" data-page="4">
+            <div class="nb-top"><span class="nb-tag">N° 04 / ON THE FUTURE</span><span class="nb-folio">04</span></div>
+            <blockquote class="nb-quote"><p>“The future of education is not watching. It is interacting.”</p></blockquote>
+            <svg class="nb-scribble" viewBox="0 0 200 16" aria-hidden="true"><path pathLength="260" d="M3 11 C 60 2, 120 14, 197 4"/></svg>
+            
+          </div>
+          <div class="nb-leaf">
+            <div class="nb-face nb-front nb-dark" data-page="2">
+            <div class="nb-top"><span class="nb-tag">N° 02 / ON CURIOSITY</span><span class="nb-folio">02</span></div>
+            <blockquote class="nb-quote"><p>“Curiosity is the beginning of understanding.”</p></blockquote>
+            <svg class="nb-scribble" viewBox="0 0 200 16" aria-hidden="true"><path pathLength="260" d="M3 6 L197 6 M14 12 L150 11"/></svg>
+            <span class="nb-hint" aria-hidden="true">TURN →</span>
+          </div>
+            <div class="nb-face nb-back nb-light" data-page="3">
+            <div class="nb-top"><span class="nb-tag">N° 03 / ON TECHNOLOGY</span><span class="nb-folio">03</span></div>
+            <blockquote class="nb-quote"><p>“Technology should make learning more human, not more complicated.”</p></blockquote>
+            <svg class="nb-scribble" viewBox="0 0 200 16" aria-hidden="true"><path pathLength="260" d="M3 9 Q 25 1 48 9 T 94 9 T 140 9 T 197 9"/></svg>
+            <span class="nb-hint" aria-hidden="true">← BACK</span>
+          </div>
+          </div>
+          <div class="nb-shade nb-shade-l" aria-hidden="true"></div>
+          <div class="nb-shade nb-shade-r" aria-hidden="true"></div>
+          <div class="nb-rings" aria-hidden="true"></div>
+        </div>
+        <div class="nb-controls">
+          <button class="nb-btn" id="nb-prev" type="button" aria-label="Previous pages">← Prev</button>
+          <span class="nb-count"><b id="nb-idx">01</b> / 02 &nbsp;·&nbsp; SPREAD</span>
+          <button class="nb-btn" id="nb-next" type="button" aria-label="Next pages">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mindset section-dark" aria-label="The polymath mindset: four connected disciplines">
+      <div class="mindset-mark" id="mn-mark">
+      <svg class="mn-graph" viewBox="0 0 460 460" aria-hidden="true">
+        <defs>
+          <g id="mn-i-math"><path d="M-16 -14 H16 M-9 -14 V16 M9 -14 V10 Q9 16 15 16"/></g>
+      <g id="mn-i-chem"><path d="M-6 -17 H6 M-3.5 -17 V-3 L-16 15 Q-18 19 -14 19 H14 Q18 19 16 15 L3.5 -3 V-17"/><path d="M-11 6.5 Q-4 3 3 6.5 T13 6.5"/><circle class="dot" cx="-1" cy="11.5" r="1.5"/><circle class="dot" cx="6" cy="13" r="1.1"/></g>
+      <g id="mn-i-bio"><path d="M-10 -19 C -10 -13,10 -13,10 -7 C 10 -1,-10 -1,-10 5 C -10 11,10 11,10 17"/><path d="M10 -19 C 10 -13,-10 -13,-10 -7 C -10 -1,10 -1,10 5 C 10 11,-10 11,-10 17"/><path d="M-9 -15.3 H9 M-9.8 -4 H9.8 M-9.8 8 H9.8" stroke-width="2"/></g>
+      <g id="mn-i-phy"><circle class="dot" r="2.6"/><ellipse rx="21" ry="8.5"/><ellipse rx="21" ry="8.5" transform="rotate(60)"/><ellipse rx="21" ry="8.5" transform="rotate(120)"/></g>
+        </defs>
+        <g class="mn-edges">
+          <line class="edge e-math e-chem" x1="120" y1="120" x2="340" y2="120"/>
+          <line class="edge e-bio e-phy" x1="120" y1="340" x2="340" y2="340"/>
+          <line class="edge e-math e-bio" x1="120" y1="120" x2="120" y2="340"/>
+          <line class="edge e-chem e-phy" x1="340" y1="120" x2="340" y2="340"/>
+          <line class="edge e-math e-phy" x1="120" y1="120" x2="340" y2="340"/>
+          <line class="edge e-chem e-bio" x1="340" y1="120" x2="120" y2="340"/>
+        </g>
+        <g class="mn-nodes">
+          <g class="mn-node" data-subject="math"><circle class="mn-ring" cx="120" cy="120" r="40"/><use href="#mn-i-math" x="120" y="120"/></g>
+      <g class="mn-node" data-subject="chem"><circle class="mn-ring" cx="340" cy="120" r="40"/><use href="#mn-i-chem" x="340" y="120"/></g>
+      <g class="mn-node" data-subject="bio"><circle class="mn-ring" cx="120" cy="340" r="40"/><use href="#mn-i-bio" x="120" y="340"/></g>
+      <g class="mn-node" data-subject="phy"><circle class="mn-ring" cx="340" cy="340" r="40"/><use href="#mn-i-phy" x="340" y="340"/></g>
+        </g>
+      </svg>
+      <button type="button" class="mn-hit" data-subject="math" style="--x:26.1%;--y:26.1%"><span class="mn-label">Mathematics</span></button>
+      <button type="button" class="mn-hit" data-subject="chem" style="--x:73.9%;--y:26.1%"><span class="mn-label">Chemistry</span></button>
+      <button type="button" class="mn-hit" data-subject="bio" style="--x:26.1%;--y:73.9%"><span class="mn-label">Biology</span></button>
+      <button type="button" class="mn-hit" data-subject="phy" style="--x:73.9%;--y:73.9%"><span class="mn-label">Physics</span></button>
+    </div>
+      <div class="mindset-copy reveal"><p class="eyebrow">06 / THE POLYMATH MINDSET</p><h2>One mind.<br>Many disciplines.<br><span>One interconnected world.</span></h2><p>Mathematics explains patterns. Chemistry explains transformation. Biology explains life. Physics explains the systems underneath it all. We build bridges between them.</p></div>
+    </section>
+
+    <section id="contact" class="contact section-light">
+      <div class="contact-intro reveal"><span>07 / LET'S BUILD</span><h2>Have an idea worth making <em>interactive?</em></h2><p>Tell us what you are building, teaching or imagining. We will take it from there.</p><div class="contact-email">polymathwizardhyd@gmail.com</div></div>
+      <form id="contact-form" class="contact-form reveal">
+        <label><span>01 / NAME</span><input required name="name" type="text" placeholder="Your name" /></label>
+        <label><span>02 / EMAIL</span><input required name="email" type="email" placeholder="you@example.com" /></label>
+        <label><span>03 / ORGANIZATION</span><input name="organization" type="text" placeholder="School / Company / Independent" /></label>
+        <label><span>04 / SUBJECT</span><input required name="subject" type="text" placeholder="What would you like to discuss?" /></label>
+        <label class="full"><span>05 / MESSAGE</span><textarea required name="message" rows="5" placeholder="Describe your idea or requirement..."></textarea></label>
+        <button class="button button-dark full" type="submit">Send Enquiry <span>↗</span></button>
+        <p class="form-note">This prototype opens your email client with a prepared message to polymathwizardhyd@gmail.com.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer section-dark">
+    <div class="footer-top"><img src="assets/wizard-full.svg" alt="Polymath Wizard" /><div><p>TURNING EDUCATION INTO AN INTERACTIVE EXPERIENCE.</p><a href="mailto:polymathwizardhyd@gmail.com">polymathwizardhyd@gmail.com</a></div></div>
+    <div class="footer-bottom"><span>© 2026 POLYMATH WIZARD</span><span>MATHEMATICS · CHEMISTRY · BIOLOGY · PHYSICS</span><a href="#top">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+  <script src="scroll-fx.js"></script>
+</body>
+</html>
